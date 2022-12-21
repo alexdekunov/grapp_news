@@ -6,8 +6,8 @@ app = Flask(__name__)
 @app.route('/')
 def index():
     title = "Новости Python"
-    news = get_python_news()
-    return render_template('index.html', page_title=title)
+    news_list = get_python_news()
+    return render_template('index.html', page_title=title, news=news_list)
 
 
 if __name__ == "__main__":

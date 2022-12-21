@@ -11,7 +11,7 @@ def get_html(url):
         return False
 
 
-def get_python_news(html):
+def get_python_news():
     html = get_html("https://www.python.org/blogs/")
     if html:
         soup = BeautifulSoup(html, "html.parser")
